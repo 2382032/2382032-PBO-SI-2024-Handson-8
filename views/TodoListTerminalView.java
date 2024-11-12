@@ -96,7 +96,7 @@ public class TodoListTerminalView implements TodoListView{
         if (newTodo.equals("x")) {
             return;
         }
-        boolean isEditTodoSuccess = todoListservice.editTodoList(Integer.valueOf(selectedTodo), newTodo);
+        boolean isEditTodoSuccess = todoListService.editTodoList(Integer.valueOf(selectedTodo), newTodo);
         if (isEditTodoSuccess) {
             System.out.println("Berhasil mengedit todo");
         } else {
