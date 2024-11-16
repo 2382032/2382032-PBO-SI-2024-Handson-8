@@ -12,13 +12,14 @@ public class Database {
     private final String port;
     private Connection connection;
 
-    public Database(String dbName, String userName, String password, String host, String port) {
+    public Database(final String dbName, final String userName, final String password, final String host, final String port) {
         this.dbName = dbName;
         this.userName = userName;
         this.password = password;
         this.host = host;
         this.port = port;
     }
+
     public Connection getConnection() {
         return connection;
     }
@@ -32,6 +33,6 @@ public class Database {
 
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
+                }
         }
-    }
 }
